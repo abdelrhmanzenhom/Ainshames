@@ -1,0 +1,29 @@
+﻿  MyForm.cpp
+E:\New folder\Bigpicture\Bigpicture\MyForm.h(3012,15): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+E:\New folder\Bigpicture\Bigpicture\MyForm.h(3812,15): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+E:\New folder\Bigpicture\Bigpicture\MyForm.h(4090,11): warning C4101: 'ppp': unreferenced local variable
+E:\New folder\Bigpicture\Bigpicture\MyForm.h(4157,11): warning C4101: 'ppp': unreferenced local variable
+E:\New folder\Bigpicture\Bigpicture\MyForm.h(4219,11): warning C4101: 'ppp': unreferenced local variable
+E:\New folder\Bigpicture\Bigpicture\MyForm.h(4249,11): warning C4101: 'ppp': unreferenced local variable
+E:\New folder\Bigpicture\Bigpicture\MyForm.h(4280,11): warning C4101: 'ppp': unreferenced local variable
+E:\New folder\Bigpicture\Bigpicture\MyForm.h(4311,11): warning C4101: 'ppp': unreferenced local variable
+E:\New folder\Bigpicture\Bigpicture\MyForm.h(4342,11): warning C4101: 'ppp': unreferenced local variable
+E:\New folder\Bigpicture\Bigpicture\MyForm.h(4554,12): warning C4101: 'person': unreferenced local variable
+E:\New folder\Bigpicture\Bigpicture\MyForm.h(4554,6): warning C4101: 'star': unreferenced local variable
+  Search.cpp
+E:\New folder\Bigpicture\Bigpicture\Search.cpp(219,46): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
+E:\New folder\Bigpicture\Bigpicture\Search.cpp(233,46): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
+E:\New folder\Bigpicture\Bigpicture\Search.cpp(247,46): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
+E:\New folder\Bigpicture\Bigpicture\Search.cpp(261,46): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
+E:\New folder\Bigpicture\Bigpicture\Search.cpp(275,46): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
+E:\New folder\Bigpicture\Bigpicture\Search.cpp(289,46): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
+  User.cpp
+E:\New folder\Bigpicture\Bigpicture\User.cpp(36,23): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
+  Generating Code...
+E:\New folder\Bigpicture\Bigpicture\Search.cpp(296): warning C4715: 'Product::product_id': not all control paths return a value
+E:\New folder\Bigpicture\Bigpicture\MyForm.h(3012): warning C4700: uninitialized local variable 'star' used
+E:\New folder\Bigpicture\Bigpicture\MyForm.h(3013): warning C4700: uninitialized local variable 'person' used
+E:\New folder\Bigpicture\Bigpicture\MyForm.h(3812): warning C4700: uninitialized local variable 'star' used
+E:\New folder\Bigpicture\Bigpicture\MyForm.h(3813): warning C4700: uninitialized local variable 'person' used
+  CartClass.obj : MSIL module encountered; incremental linking is disabled for MSIL; performing full link
+  Bigpicture.vcxproj -> E:\New folder\Bigpicture\x64\Debug\Bigpicture.exe

@@ -1,0 +1,10 @@
+D:\acm\Bigpicture\Bigpicture\x64\Debug\Bigpicture.vcxproj.AssemblyReference.cache
+D:\acm\Bigpicture\Bigpicture\x64\Debug\Bigpicture.vcxproj.SuggestedBindingRedirects.cache
+D:\acm\Bigpicture\Bigpicture\x64\Debug\Bigpicture.MyForm.resources
+D:\acm\Bigpicture\Bigpicture\x64\Debug\Bigpicture.vcxproj.GenerateResource.cache
+D:\acm\Bigpicture\Bigpicture\x64\Debug\Bigpicture.MyForm1.resources
+E:\New folder\Bigpicture\Bigpicture\x64\Debug\Bigpicture.vcxproj.AssemblyReference.cache
+E:\New folder\Bigpicture\Bigpicture\x64\Debug\Bigpicture.vcxproj.SuggestedBindingRedirects.cache
+E:\New folder\Bigpicture\Bigpicture\x64\Debug\Bigpicture.MyForm.resources
+E:\New folder\Bigpicture\Bigpicture\x64\Debug\Bigpicture.MyForm1.resources
+E:\New folder\Bigpicture\Bigpicture\x64\Debug\Bigpicture.vcxproj.GenerateResource.cache
