@@ -1,0 +1,213 @@
+Drop table Products cascade constraints;
+Drop table Users cascade constraints;
+Drop table Issues cascade constraints;
+Drop table Auctions cascade constraints;
+Drop table UserAuction cascade constraints;
+
+
+Create Table Products
+(ProductID number(10) primary key, ProductName varchar2(60) , ProductCategory varchar2(60),ProductSalary number(6)) ;
+
+
+
+
+ Create Table Users
+(UserID number(10) primary key, UserName varchar2(500),userpassword number(20), UserMode varchar2(500), UserAccount varchar2(500), usergender varchar2(500));
+
+
+
+Create Table Issues
+(IssueID number(10) primary key , Issuedescrip varchar2(60), Issuestatus varchar2(60) ,UserID number(10) References Users (UserID) , IssueDate date);
+
+
+Create Table Auctions
+(AuctionID number(10) primary key, AuctionName varchar2(50),AuctionStatus varchar2(50), Price number(10),ProductID number(10) references Products (ProductID) ON Delete cascade, AuctionDate date);
+
+
+Create Table UserAuction
+(UserID number(10) References Users (UserID) , AuctionID number(10) References Auctions 
+(AuctionID), CONSTRAINT Flm_Act_PK PRIMARY KEY(UserID, AuctionID));
+
+
+
+insert into Products values
+(1, 'House','place',1000);
+insert into Products values
+(2, 'Factory','place',5000);
+insert into Products values
+(3, 'Land','place',200);
+insert into Products values
+(4, 'Car','tecnology',52);
+insert into Products values
+(5, 'Laptop','tecnology',70);
+insert into Products values
+(6, 'Gold','Natural',7000);
+insert into Products values
+(7, 'mobiles','tecnology',80);
+
+
+
+insert into Users values
+(1, 'Ahmed',55758,'Bidder','Ahmed@gmail.com','M');
+insert into Users values
+(2, 'Mohammed',178271,'Admin','Mohammed@gmail.com','M');
+insert into Users values
+(3, 'Suzan',72651,'Bidder','Suzan@gmail.com','F');
+insert into Users values
+(4, 'Gamal',7878,'Admin','Gamal@gmail.com','M');
+insert into Users values
+(5, 'Fahmy',454,'Auctioneer','Fahmy@gmail.com','M');
+insert into Users values
+(6, 'Rabab',78287,'Auctioneer','Rabab@gmail.com','F');
+
+
+
+insert into Issues values
+(1, 'The connection is bad','present',4,'16-Nov-2012');
+insert into Issues values
+(2, 'Canot access','present',2,'10-Jul-2015');
+
+
+
+
+insert into Auctions values
+(1, 'Cars','present',52,4,'10-Jul-2007');
+insert into Auctions values
+(2, 'Lands','Finished',1000,1,'17-Nov-2015');
+insert into Auctions values
+(3, 'Tecnologies','Finished',807,5,'14-Jul-2017');
+insert into Auctions values
+(4, 'Natural','present',7000,6,'20-Oct-2012');
+insert into Auctions values
+(5, 'Lands','present',200,3,'12-Dec-2010');
+
+
+
+
+
+
+insert into UserAuction values
+(1, 1);
+insert into UserAuction values
+(1, 2);
+insert into UserAuction values
+(1, 3);
+insert into UserAuction values
+(2, 4); 
+insert into UserAuction values
+(2, 5); 
+insert into UserAuction values
+(4, 5);
+insert into UserAuction values
+(4, 1);
+insert into UserAuction values
+(3, 2);
+insert into UserAuction values
+(3, 4);
+
+
+create or replace procedure Insert_Issue
+(RID number, MID varchar2,CID Number,
+DRented Date)
+as
+begin
+insert into Issues
+(IssueID, Issuedescrip,UserID, IssueDate)
+Values ( RID, MID, CID, DRented) ;
+End ;
+
+
+
+
+
+create or replace
+procedure search_products
+(Price in varchar2 , CID out sys_refcursor)
+as
+begin
+open CID for
+SELECT PRODUCTNAME, ProductSALARY
+from Products
+where ProductSalary > Price; 
+end;
+
+
+
+
+create or replace procedure update_status
+ (CID Number)
+as
+begin
+update Auctions
+set AuctionStatus = 'y'
+where AuctionID = CID ;
+end;
+
+
+
+create or replace
+procedure GetAuctionsrows
+(AucStatus in varchar2 , CID out sys_refcursor)
+as
+begin
+open CID for
+select AuctionName,Price
+from Auctions
+where AuctionStatus = AucStatus;
+end;
+
+
+
+create or replace
+procedure Insert_Users
+(RID number, MID varchar2,CID Number,
+DRented varchar2, UserAccount varchar2,CIaD VARCHAR2)
+as
+begin
+INSERT INTO users
+(UserID, UserName,userpassword, UserMode, UserAccount, usergender)
+Values ( RID, MID, CID, DRented, UserAccount , ciad );
+End ;
+
+
+
+create or replace procedure Insert_Rental
+(RID number, MID Number,CID Number,
+DRented Date, DBack Date, Cost Number)
+as
+begin
+insert into Rentals
+(RentID, MemberID,CopyID, DateRented, DateDueBack, RentalCost)
+Values ( RID, MID, CID, DRented, DBack, Cost) ;
+End ; 
+
+
+
+create or replace procedure GetAuctionsmaxprice (namee in VARCHAR2, RID out number)
+as
+begin
+select max(price)
+into RID
+from Auctions
+where auctionname=namee;
+end;
+
+
+create or replace procedure GetAuctionsID (RID out number)
+as
+begin
+select max(AuctionID)
+into RID
+from Auctions;
+end;
+
+
+
+
+create or replace procedure GetUsersID (RID out number)
+as
+begin
+select max(UserID)
+into RID
+from Users;
+end;

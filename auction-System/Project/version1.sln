@@ -1,0 +1,32 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.33529.622
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "version1", "version1\version1.csproj", "{4D79D524-7036-4F07-A30D-43F99E4B217A}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{2BF6E018-2401-4382-9250-1AA065293D42}"
+	ProjectSection(SolutionItems) = preProject
+		F:\ActorsForm.cs = F:\ActorsForm.cs
+		version1\ActorsForm.Designer.cs = version1\ActorsForm.Designer.cs
+		version1\ActorsForm.resx = version1\ActorsForm.resx
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4D79D524-7036-4F07-A30D-43F99E4B217A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4D79D524-7036-4F07-A30D-43F99E4B217A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4D79D524-7036-4F07-A30D-43F99E4B217A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4D79D524-7036-4F07-A30D-43F99E4B217A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {B2B4A9B3-22F9-422A-9E7B-6421B772D785}
+	EndGlobalSection
+EndGlobal
